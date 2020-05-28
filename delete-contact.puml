@@ -1,0 +1,39 @@
+@startuml
+actor customer
+box "ResourceLayer"
+participant V2ContactsImpl
+end box
+box "ServiceLayer"
+participant V2AccountsService
+end box
+box "Integration Layer"
+participant SiebelAccountSdkService
+participant MDMIntegrationService
+end box
+
+/'customer delete Contact'/
+group customerDeleteContact
+activate V2ContactsImpl
+customer -> V2ContactsImpl: DELETE: \n/accounts/{accountId}/contacts/{contactId}
+activate V2AccountsService
+V2ContactsImpl -> V2AccountsService: deleteContact\n(accountId,contactId)
+activate MDMIntegrationService
+V2AccountsService -> MDMIntegrationService: getAccount(accountId)
+V2AccountsService <- MDMIntegrationService: AccountsResponse
+V2AccountsService -> V2AccountsService: validateDeleteContact(MDM)
+activate SiebelAccountSdkService
+V2AccountsService -> SiebelAccountSdkService: validateDeleteContact\n(Siebel)
+V2AccountsService <- SiebelAccountSdkService: ContactDeleteValidationOutput
+note right: com.intuit.platform.\nservices.siebel.sdk.accountvalidation.\nContactDeleteValidationOutput
+deactivate SiebelAccountSdkService
+V2AccountsService -> MDMIntegrationService: deleteContact(accountId, contactId)
+note right: contact deleted
+V2AccountsService <- MDMIntegrationService
+deactivate MDMIntegrationService
+V2AccountsService -> V2ContactsImpl:AccountsResponse
+deactivate V2AccountsService
+V2ContactsImpl -> customer:AccountsResponse
+deactivate V2ContactsImpl
+end
+
+@enduml
