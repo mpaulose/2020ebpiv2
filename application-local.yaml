@@ -1,0 +1,206 @@
+app:
+  ebpi:
+    sigSci: true
+    account:
+      ebpi-account-pub-apis-companies:
+        appId: Intuit.billingcomm.billing.ebpiaccountpriasync
+        appSecret: preprd6UEg2QYMCU0ADL3FG6j09oLSnPCSPlrcWh
+      ebpi-account-pub-apis-acct:
+        jms-producer-configuration:
+          userName: admin
+          password: admin
+          brokerEndpoint: tcp://localhost:61616
+          request-queue-out: Intuit.global.dev.platform.enterprise.AccountRequestV1.Queue
+          response-queue-out: Intuit.global.dev.platform.enterprise.AccountResponseV1.Queue
+  cas:
+    account:
+      ebpi-account-pub-apis:
+      model:
+        data-source:
+          data-source-type: APACHE_TOMCAT_POOl_DATASOURCE
+          driver-class-name: oracle.jdbc.OracleDriver
+          url: jdbc:oracle:thin:@localhost:1441/cassys01
+          username: CommUser
+          password: C0mmu5er
+          max-idle: 1
+          max-active: 1
+          initial-size: 1
+          login-timeout: 300
+          testOnBorrow: true
+          testOnReturn: false
+          testWhileIdle: true
+          validationInterval: 60000
+          validationQuery: select 1 from dual
+          removeAbandoned: true
+          removeAbandonedTimeout: 60
+          logAbandoned: true
+          minEvictableIdleTimeMillis: 30000
+          timeBetweenEvictionRunsMillis: 30000
+sdk:
+  entl:
+    offerings:
+      http-client:
+        connection-request-timeout: 50000
+        connect-timeout: 50000
+        socket-timeout: 50000
+        read-timeout: 50000
+        retry-count: 0
+        retry-request-sent: false
+        max-connections: 50
+        max-connections-per-route: 50
+        keep-alive-secs: 5
+      urls:
+        summary-url: https://entitlement-e2e.platform.intuit.com/v1/entitledofferings
+  util:
+    http-client:
+      connection-request-timeout: 50000
+      connect-timeout: 50000
+      socket-timeout: 50000
+      read-timeout: 50000
+      retry-count: 0
+      max-connections: 50
+      max-connections-per-route: 50
+      keep-alive-secs: 5
+    cache:
+      applications-response-cache-config:
+        enabled: true
+        cache-name: applications_response_local
+        ttl-value: 1
+        ttl-timeUnit: HOURS
+        owner-name: UtilSDK
+    base-url: https://billing-qal.platform.intuit.com
+    create-document-url: /v1/documents
+    applications-url: /v1/applications
+  siebel:
+    http-client:
+      connect-timeout: 5000
+      read-timeout: 30000
+    urls:
+      siebel-sales-order-endpoint:
+      swi-customer-party-service-endpoint:
+      ofm-sync-proxy-url: https://sycsys.ofm-preprod.a.intuit.com/IntuitProxyManager/intuitproxymanager
+    fields-to-mask:
+  mdm:
+    url: https://e2e-mdm101-pub.mdm-preprod.a.intuit.com/v1/SyncCustomerAccountService
+    http-client:
+      connect-timeout: 5000
+      read-timeout: 30000
+    fetch-mdm-service:
+      url: https://stg-mdm101-pub.mdm-preprod.a.intuit.com/mdm/FetchCustomerMDMService
+      http-client:
+        connect-timeout: 5000
+        read-timeout: 30000
+    sync-mdm-service:
+      url: https://e2e-mdm101.mdm-preprod.a.intuit.com/v1/SyncCustomerAccountService
+      http-client:
+        connect-timeout: 5000
+        read-timeout: 30000
+  rn:
+    baseUrl: https://e2e.eis-preprod.a.intuit.com
+    authToken: 9e26599e87ba4926805c8c327fd0a46e
+    httpClient:
+      connectionRequestTimeout: 1000
+      connectTimeout: 5000
+      keepAliveSecs: 60
+      maxConnections: 50
+      maxConnectionsPerRoute: 10
+      readTimeout: 5000
+      retryCount: 0
+      retryRequestSent: false
+      socketTimeout: 5000
+      SSLEnabled: false
+  ofm-sync:
+    baseurl: https://sycsys.ofm-preprod.a.intuit.com
+    connectionTimeout: 30000
+    receiveTimeout: 90000
+    scrub: false
+  ius:
+    appId: Intuit.billingcomm.billing.ebpiaccountpriasync
+    appSecret: preprdAc1LBhGlYKvykOSZS2SeGb97YBOkAihO1l
+    http-client:
+      connection-request-timeout: 50000
+      connect-timeout: 50000
+      socket-timeout: 50000
+      read-timeout: 50000
+      retry-count: 0
+      max-connections: 50
+      max-connections-per-route: 50
+      keep-alive-secs: 5
+    base-url: https://accounts-e2e.platform.intuit.com
+    urls:
+      realmByRealmIdUrl: /v1/realms/{realmId}
+      realmByRealmIdsUrl: /v1/realms
+      getGrantByRealmIdUrl: /v1/realms/{realmId}/grants
+      createGrantUrl: /v1/grants
+      updateGrantUrl: /v1/grants/{grantId}
+      deleteGrantUrl: /v1/grants
+      getUserAttributeUrl: /v1/users/{userId}/attributes?attr_namespace=iip.dg.oia
+      realmsOfUserUrl: /v1/users/{userId}/realms
+  cas:
+    account:
+      http-client:
+        connection-request-timeout: 5000
+        connect-timeout: 5000
+        socket-timeout: 30000
+        read-timeout: 30000
+        retry-count: 0
+        max-connections: 50
+        max-connections-per-route: 50
+        keep-alive-secs: 5
+      base-url: https://e2e-pub.cas-preprod.a.intuit.com
+      fields-to-mask: accountName,phone,contactNumber,contactInfo.firstName,contactInfo.lastName,contactInfo.email,contactInfo.phone.phoneNumber,contactInfo.phone.phoneExt,addressInfo.addressLine1,addressInfo.addressLine2,addressInfo.city,addressInfo.state,addressInfo.postalCode,addressInfo.country,addressInfo.geoCode,paymentMethod.creditCard.accountType,paymentMethod.creditCard.accountName,paymentMethod.creditCard.expirationMonth,paymentMethod.creditCard.expirationYear,paymentInfo.cvv,routingNumber,paymentMethod.bankAccount.accountType.CHECKING,paymentMethod.bankAccount.accountType.SAVINGS,paymentMethod.bankAccount.accountNumber,paymentMethod.bankAccount.accountName,paymentMethod.bankAccount.routingNumber
+    entitlement:
+      http-client:
+        connection-request-timeout: 5000
+        connect-timeout: 5000
+        socket-timeout: 30000
+        read-timeout: 30000
+        retry-count: 0
+        max-connections: 50
+        max-connections-per-route: 50
+        keep-alive-secs: 5
+      base-url: https://e2e-pub.cas-preprod.a.intuit.com
+      fields-to-mask: accountName,phone,contactNumber,contactInfo.firstName,contactInfo.lastName,contactInfo.email,contactInfo.phone.phoneNumber,contactInfo.phone.phoneExt,addressInfo.addressLine1,addressInfo.addressLine2,addressInfo.city,addressInfo.state,addressInfo.postalCode,addressInfo.country,addressInfo.geoCode,paymentMethod.creditCard.accountType,paymentMethod.creditCard.accountName,paymentMethod.creditCard.expirationMonth,paymentMethod.creditCard.expirationYear,paymentInfo.cvv,routingNumber,paymentMethod.bankAccount.accountType.CHECKING,paymentMethod.bankAccount.accountType.SAVINGS,paymentMethod.bankAccount.accountNumber,paymentMethod.bankAccount.accountName,paymentMethod.bankAccount.routingNumber
+library:
+  slc:
+    caching:
+      mode: distributed
+    redis:
+      yaml-config-file: redisson-local.yaml
+  security:
+    offline:
+      asset-id: 147510480102883361
+      system-user-name: e2erijvfbj9ecsxvny4hnxqlq26owaqyde9@robot.net
+      system-password: "N1ihFq3WuXTxsAPuoY7GKArAdVBqMPAu"
+      realm-id: 123145964165782
+      customer-realm-id: 123148305434279
+      endpoint: https://access-e2e.platform.intuit.com/v1/offline_tickets
+      offline-endpoint-v2: https://access-e2e.platform.intuit.com/v2/offline_tickets
+      ticket-caching-time: 600
+      ticket-renew-lifetime: 300
+      ticket-max-life-in-seconds: 86400
+    online:
+      endpoint: https://access-e2e.platform.intuit.com/v2/tickets
+      default-min-auth-level: 20
+    common:
+      app-id: Intuit.billingcomm.billing.ebpiaccountpriasync
+      app-secret: preprd6UEg2QYMCU0ADL3FG6j09oLSnPCSPlrcWh
+      max-error-retry: 3
+      stale-connection-check-enabled: true
+      stale-connection-check-sleep-time: 3000
+      stale-connection-check-idle-threshold: 5000
+      skip-signature-check-for-cached: true
+      ignore-security-checks: [health]
+    http-client:
+      connect-timeout: 30000
+      socket-timeout: 30000
+      max-connections: 50
+      max-connections-per-route: 10
+qbesHostingId: 1100759
+qbPlusHostingId: 1101460
+qbPlusProductId: 1099767
+items: 1100759,1099578,1099606,1100801,1100800,1300012,1300013,1300014,1300048,1300049,1300050,1300330,1300331,1300332
+jsk:
+  lastmile:
+    audience: agreed up with API GW
+    enabled: true
