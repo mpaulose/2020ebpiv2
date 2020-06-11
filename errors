@@ -1,1 +1,24 @@
 [ERROR] /Users/mpaulose/dev/ebpi-acct-api/app/ebpi-account-pub-apis-acct/src/main/java/com/intuit/platform/services/ebpi/account/apis/acct/resource/V2AccountsImpl.java:[106,5] method does not override or implement a method from a supertype
+Index: app/ebpi-account-pub-apis-acct/pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/ebpi-account-pub-apis-acct/pom.xml	(revision f9d2185213b1f8be63320fce45732d44cbb85af4)
++++ app/ebpi-account-pub-apis-acct/pom.xml	(date 1591919069000)
+@@ -24,6 +24,7 @@
+         <dependency>
+             <groupId>com.intuit.platform.services.ebpi</groupId>
+             <artifactId>ebpi-common-util</artifactId>
++            <version>1.1.29.0-SNAPSHOT</version>
+         </dependency>
+         <dependency>
+             <groupId>com.intuit.platform.services.common</groupId>
+@@ -63,6 +64,7 @@
+         <dependency>
+             <groupId>com.intuit.platform.services.common</groupId>
+             <artifactId>platform-common-schema-ebpi-account</artifactId>
++            <version>1.1.29.0-SNAPSHOT</version>
+         </dependency>
+         <dependency>
+             <groupId>com.intuit.platform.services.common</groupId>
