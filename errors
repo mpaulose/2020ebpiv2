@@ -22,3 +22,8 @@ Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
          </dependency>
          <dependency>
              <groupId>com.intuit.platform.services.common</groupId>
+
+************
+jsk.spring.config.idps.connection.api_secret_key
+
+api_secret_key: /Users/mpaulose/.idps/key_v2-2c083f8bf6cc0.pem
