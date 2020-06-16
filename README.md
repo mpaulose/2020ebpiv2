@@ -2,5 +2,6 @@
 EBPI opensource project contribution 
 * delete contact
 
--Dspring.profiles.active=local
 com.intuit.platform.services.ebpi.account.apis.exe.AccountServiceApplication
+-Dspring.profiles.active=local
+
