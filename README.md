@@ -7,5 +7,13 @@ EBPI opensource project contribution
 # Lessions learned
 * mvn clean install - prehook git push
 # mvn clean install - hierarchy issues 
-* cd /Users/mpaulose/dev/platform-common-schema
+* cd /Users/mpaulose/dev/platform-common-library
 * mvn clean install 
+cd /Users/mpaulose/dev/platform-common-schema
+mvn clean install
+cd /Users/mpaulose/dev/platform-common-sdk
+mvn clean install
+cd /Users/mpaulose/dev/ebpi-common
+mvn clean install
+cd /Users/mpaulose/dev/ebpi-acct-api
+mvn clean install
