@@ -6,3 +6,6 @@ EBPI opensource project contribution
 * mvn dependency:tree -Dincludes=com.intuit.platform.services.common:platform-common-sdk-mdm
 # Lessions learned
 * mvn clean install - prehook git push
+# mvn clean install - hierarchy issues 
+* cd /Users/mpaulose/dev/platform-common-schema
+* mvn clean install 
