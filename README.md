@@ -8,6 +8,13 @@ EBPI opensource project contribution
 
 # Lessions learned
 * mvn clean install - prehook git push
+
+# child versions are in parent 
+        <platform-common-parent.version>1.1.9.0-SNAPSHOT</platform-common-parent.version>
+        <platform-common-library.version>1.1.31.0-SNAPSHOT</platform-common-library.version>
+        <platform-common-schema.version>1.1.29.0-SNAPSHOT</platform-common-schema.version>
+        <platform-common-sdk.version>1.1.45.0-SNAPSHOT</platform-common-sdk.version>
+
 # mvn clean install - hierarchy issues 
 * cd /Users/mpaulose/dev/platform-common-library
 * mvn clean install 
