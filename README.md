@@ -32,4 +32,5 @@ EBPI opensource project contribution
 * git fetch upstream
 * git checkout develop
 * git rebase upstream/develop
-* 
+* git push -f origin develop
+
