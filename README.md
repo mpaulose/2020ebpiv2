@@ -26,3 +26,9 @@ EBPI opensource project contribution
 * mvn clean install
 * cd /Users/mpaulose/dev/ebpi-acct-api
 * mvn clean install
+
+# sync remote git
+* git remote add upstream https://github.intuit.com/billingcomm-billing/ebpi-acct-api.git
+* git fetch upstream
+* git checkout develop
+* 
