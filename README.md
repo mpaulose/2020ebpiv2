@@ -31,4 +31,4 @@ EBPI opensource project contribution
 * git remote add upstream https://github.intuit.com/billingcomm-billing/ebpi-acct-api.git
 * git fetch upstream
 * git checkout develop
-* 
+* git rebase upstream/develop
