@@ -29,9 +29,9 @@ EBPI opensource project contribution
 * cd /Users/mpaulose/dev/platform-common-schema
 * mvn clean install
 * cd /Users/mpaulose/dev/platform-common-schema/platform-common-schema-mdm
-* mvn clean instll 
+* mvn clean install 
 * cd /Users/mpaulose/dev/platform-common-schema/platform-common-schema-ebpi/platform-common-schema-ebpi-account
-* mvn clean instll 
+* mvn clean install 
 * cd /Users/mpaulose/dev/platform-common-sdk
 * mvn clean install
 * cd /Users/mpaulose/dev/ebpi-common
