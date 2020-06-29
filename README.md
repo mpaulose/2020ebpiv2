@@ -25,19 +25,19 @@ EBPI opensource project contribution
 
 # mvn clean install - hierarchy issues 
 * cd /Users/mpaulose/dev/platform-common-library
-* mvn clean install 
+* mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/platform-common-schema
-* mvn clean install
+* mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/platform-common-schema/platform-common-schema-mdm
-* mvn clean install 
+* mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/platform-common-schema/platform-common-schema-ebpi/platform-common-schema-ebpi-account
-* mvn clean install 
+* mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/platform-common-sdk
-* mvn clean install
+* mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/ebpi-common
-* mvn clean install
+* mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/ebpi-acct-api
-* mvn clean install
+* mvn clean install -DskipTests=true
 
 # sync remote git
 * git remote add upstream https://github.intuit.com/platform-services-common/platform-common-sdk
