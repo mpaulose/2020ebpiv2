@@ -34,7 +34,9 @@ EBPI opensource project contribution
 * mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/platform-common-sdk
 * mvn clean install -DskipTests=true
-* cd /Users/mpaulose/dev/platform-common-sdk/
+* cd /Users/mpaulose/dev/platform-common-sdk/platform-common-sdk-mdm/
+* mvn clean install -DskipTests=true
+* cd /Users/mpaulose/dev/platform-common-sdk/platform-common-sdk-siebel/
 * mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/ebpi-common
 * mvn clean install -DskipTests=true
