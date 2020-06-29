@@ -34,9 +34,13 @@ EBPI opensource project contribution
 * mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/platform-common-sdk
 * mvn clean install -DskipTests=true
+* cd /Users/mpaulose/dev/platform-common-sdk/
+* mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/ebpi-common
 * mvn clean install -DskipTests=true
 * cd /Users/mpaulose/dev/ebpi-acct-api
+* mvn clean install -DskipTests=true
+* cd /Users/mpaulose/dev/ebpi-acct-api/app/ebpi-account-pub-apis-acct
 * mvn clean install -DskipTests=true
 
 # sync remote git
