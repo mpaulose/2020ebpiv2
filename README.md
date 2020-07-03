@@ -4,6 +4,7 @@ EBPI opensource project contribution
 * com.intuit.platform.services.ebpi.account.apis.exe.AccountServiceApplication
 * -Dspring.profiles.active=local
 * mvn dependency:tree -Dincludes=com.intuit.platform.services.common:platform-common-sdk-mdm
+* mvn dependency:tree -Dincludes=com.intuit.platform.services.common:platform-common-schema-mdm
 * mvn dependency:tree -Dincludes=com.intuit.platform.services.common:platform-common-schema-ebpi-account
 
 # Lessions learned
