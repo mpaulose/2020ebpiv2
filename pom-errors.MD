@@ -1,7 +1,7 @@
 # platform-ebpi-parent:
 * platform-common-parent - <version>1.1.9.0</version>
-  *      <platform-common-parent.version>1.1.9.0</platform-common-parent.version>
-  *      <platform-common-library.version>1.1.34.0-SNAPSHOT</platform-common-library.version>
+*       <platform-common-parent.version>1.1.9.0</platform-common-parent.version>
+* <platform-common-library.version>1.1.34.0-SNAPSHOT</platform-common-library.version>
 # platform-common-schema:
 * <artifactId>platform-common-parent</artifactId> - <version>1.1.9.0</version>
 # platform-common-sdk
