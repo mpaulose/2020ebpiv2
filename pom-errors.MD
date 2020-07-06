@@ -13,4 +13,6 @@
 * <platform-common-library.version>1.1.34.0-SNAPSHOT</platform-common-library.version>
 * <platform-common-schema.version>1.1.31.0-SNAPSHOT</platform-common-schema.version>
 # ebpi-common-exception-rs-handler-library
-<platform-common-schema-ebpi-legacy.version>${platform-common-schema.version}</platform-common-schema-ebpi-legacy.version>
+* <platform-common-schema-ebpi-legacy.version>${platform-common-schema.version}</platform-common-schema-ebpi-legacy.version>
+# ebpi-acct-api
+* 
