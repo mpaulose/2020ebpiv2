@@ -17,7 +17,9 @@ https://my-account.app.intuit.com/app/my-account/karbon?debug=1&can=10100&produc
 
 https://my-account.app.intuit.com/app/my-account/karbon?debug=1&can=10100&productCode=07&source=MyAccount
 
-PBR1. QAL -
+# PBR
+
+1. QAL -
 https://my-account-qal.app.intuit.com/app/my-account/pbr?debug=1&can=106716395&productCode=07&source=MyAccount
 
 1. E2E -
@@ -32,5 +34,6 @@ https://my-account.app.intuit.com/app/my-account/pbr?debug=1&can=10100&productCo
 
 https://my-account.app.intuit.com/app/my-account/pbr?debug=1&can=10100&productCode=07&source=MyAccount
 
-Claim New Account1. QAL -
+# Claim New Account
+1. QAL -
 https://my-account-qal.app.intuit.com/app/my-account/claim-new-account?debug=1&can=106716395&productCode=07&source=MyAccount
