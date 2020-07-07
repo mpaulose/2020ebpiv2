@@ -2,14 +2,14 @@
 # Default 
 https://my-account-e2e.app.intuit.com
 
-1. QAL -
+* QAL -
+  https://my-account-qal.app.intuit.com/app/my-account/karbon?debug=1&product=Lacerte&realm=9130349508187156&can=106716395
 
-https://my-account-qal.app.intuit.com/app/my-account/karbon?debug=1&product=Lacerte&realm=9130349508187156&can=106716395
+* E2E -
 
-1. E2E -
+  https://my-account-e2e.app.intuit.com/app/my-account/karbon?debug=1&product=Lacerte&realm=9130349508187156&can=106716395
 
-https://my-account-e2e.app.intuit.com/app/my-account/karbon?debug=1&product=Lacerte&realm=9130349508187156&can=106716395
-1) PROD -
+* PROD -
 
 https://my-account.app.intuit.com/app/my-account/karbon?debug=1&can=10100&productCode=07&source=MyAccount
 
