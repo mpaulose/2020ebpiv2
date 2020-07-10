@@ -1,3 +1,8 @@
+# JAXBException 
+
+  Cause: This error was happening in Intellij IDE, once changed java version, it fixed. 
+  
+  
 [ERROR] Failed to execute goal org.jvnet.jaxb2.maven2:maven-jaxb2-plugin:0.8.1:generate (schema) on project platform-common-schema-ebpi-legacy: Execution schema of goal org.jvnet.jaxb2.maven2:maven-jaxb2-plugin:0.8.1:generate failed: A required class was missing while executing org.jvnet.jaxb2.maven2:maven-jaxb2-plugin:0.8.1:generate: javax/xml/bind/JAXBException
 [ERROR] -----------------------------------------------------
 [ERROR] realm =    plugin>org.jvnet.jaxb2.maven2:maven-jaxb2-plugin:0.8.1
