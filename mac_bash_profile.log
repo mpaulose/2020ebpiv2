@@ -1,0 +1,13 @@
+INTUL17748f7e7:~ mpaulose$ cat ~/.bash_profile 
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_221.jdk/Contents/Home
+alias mci="mvn clean install -DskipTests=true"
+alias gs="git status"
+alias gp="git pull"
+alias yt="yarn test:jest "
+alias xcs="cd ~/dev/dashboard-service; mvn cassandra:run"
+alias xds="cd ~/dev/dashboard-service; brew services start cassandra; sleep 10; java -jar ~/dev/dashboard-service/app/target/dashboard-service.jar com.intuit.taxproportal.Application"
+alias xai="cd ~/dev/account-management-ui; nvm use 8; npm run local"
+alias xdi="cd ~/dev/dashboard-ui; nvm use 8; npm run local"
+alias xpg="cd ~/dev/pay-as-you-go; nvm use 10; yarn serve --remote"
