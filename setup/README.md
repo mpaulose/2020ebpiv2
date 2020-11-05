@@ -1,0 +1,70 @@
+# settings.xml 
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <servers>
+    <server>
+      <id>scm.dev.snap.repo</id>
+      <username>{env.NEXUS_SNAPSHOT_REPO_USERNAME}</username>
+      <password>{env.NEXUS_SNAPSHOT_REPO_PASSWORD}</password>
+    </server>
+    <server>
+      <id>scm.int.rel.repo</id>
+      <username>{env.NEXUS_RELEASE_REPO_USERNAME}</username>
+      <password>{env.NEXUS_RELEASE_REPO_PASSWORD}</password>
+    </server>
+  </servers>
+ <mirrors>
+    <mirror>
+      <id>central-mirror</id>
+      <url>http://nexus-proxy/nexus/content/groups/public</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+ </mirrors>
+ <profiles>
+	<profile>
+		<id>local-build</id>
+		<activation>
+			<activeByDefault>true</activeByDefault>
+		</activation>
+		<repositories>
+			<repository>
+				<id>scm-int-repository</id>
+				<url>http://sds-repo-int.qdc.intuit.com:8081/nexus/content/groups/repo</url>
+				<releases>
+					<enabled>true</enabled>
+				</releases>
+				<snapshots>
+				<enabled>true</enabled>
+				</snapshots>
+				<layout>default</layout>
+			</repository>
+			<repository>
+				<id>scm.dev.snap.repo</id>
+				<url>http://sdgctgdevrepo.corp.intuit.net/nexus/content/repositories/ENG.CTG.Intuit-Snapshots</url>
+				<releases>
+					<enabled>false</enabled>
+				</releases>
+				<snapshots>
+					<enabled>true</enabled>
+				</snapshots>
+				<layout>default</layout>
+			</repository>
+			<repository>
+				<id>scm.int.rel.repo</id>
+				<url>http://sdgctgdevrepo.corp.intuit.net/nexus/content/repositories/ENG.CTG.Intuit-Releases</url>
+				<releases>
+					<enabled>false</enabled>
+				</releases>
+				<snapshots>
+					<enabled>true</enabled>
+				</snapshots>
+				<layout>default</layout>
+			</repository>			
+		</repositories>		
+	</profile>
+ </profiles>
+</settings>
+
+# Order of build
+  platform-ebpi-parent
+  platform-common-parent etc
