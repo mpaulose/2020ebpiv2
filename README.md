@@ -46,12 +46,8 @@ EBPI opensource project contribution
 	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-sdk/platform-common-sdk-mdm/
-	git checkout develop
-	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-sdk/platform-common-sdk-siebel/
-	git checkout develop
-	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/ebpi-common
 	git checkout develop
@@ -62,8 +58,6 @@ EBPI opensource project contribution
 	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/ebpi-acct-api/app/ebpi-account-pub-apis-acct
-	git checkout develop
-	git pull
 	mvn clean install -DskipTests=true
 
 # sync remote git
