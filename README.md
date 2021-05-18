@@ -26,24 +26,44 @@ EBPI opensource project contribution
 
 # mvn clean install - hierarchy issues 
 	cd /Users/mpaulose/dev/platform-common-library
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-schema
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-schema/platform-common-schema-mdm
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-schema/platform-common-schema-ebpi/platform-common-schema-ebpi-account
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-sdk
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-sdk/platform-common-sdk-mdm/
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-sdk/platform-common-sdk-siebel/
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/ebpi-common
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/ebpi-acct-api
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/ebpi-acct-api/app/ebpi-account-pub-apis-acct
+	git checkout develop
+	git pull
 	mvn clean install -DskipTests=true
 
 # sync remote git
