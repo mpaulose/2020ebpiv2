@@ -38,8 +38,6 @@ EBPI opensource project contribution
 	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-schema/platform-common-schema-ebpi/platform-common-schema-ebpi-account
-	git checkout develop
-	git pull
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/platform-common-sdk
 	git checkout develop
