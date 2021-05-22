@@ -57,6 +57,10 @@ EBPI opensource project contribution
 	mvn clean install -DskipTests=true
 	cd /Users/mpaulose/dev/ebpi-acct-api/app/ebpi-account-pub-apis-acct
 	mvn clean install -DskipTests=true
+# Release process
+	release schema, sdk, ... 
+	merge to dev and get the release version
+	update ebpi-acct to release version, remove snapshot in pom versions for sdk/schema../ and commit/push
 
 # sync remote git
 * git remote add upstream https://github.intuit.com/platform-services-common/platform-common-sdk
